@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "angelolapus-pokemon-service": {
+      "projectType": "library",
+      "root": "projects/angelolapus-pokemon-service",
+      "sourceRoot": "projects/angelolapus-pokemon-service/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/angelolapus-pokemon-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angelolapus-pokemon-service/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/angelolapus-pokemon-service/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angelolapus-pokemon-service/src/test.ts",
+            "tsConfig": "projects/angelolapus-pokemon-service/tsconfig.spec.json",
+            "karmaConfig": "projects/angelolapus-pokemon-service/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "angelo-pokemon-service"

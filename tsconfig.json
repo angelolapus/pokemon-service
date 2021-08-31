@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angelolapus-pokemon-service": [
+        "dist/angelolapus-pokemon-service/angelolapus-pokemon-service",
+        "dist/angelolapus-pokemon-service"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
